@@ -68,7 +68,7 @@ namespace modbus_test
                 {
                     if (Int64.TryParse(e.FormattedValue.ToString(),out buff)==false  ||Int64.Parse(e.FormattedValue.ToString()) >short.MaxValue|| Int64.Parse(e.FormattedValue.ToString()) <short.MinValue)
                     {
-                        MessageBox.Show("数值超限");
+                        MessageBox.Show("数值上下限+ -32767");
                         dataGridView1.CancelEdit();
                         e.Cancel = true;
                     }
