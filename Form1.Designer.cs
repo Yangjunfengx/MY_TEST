@@ -29,24 +29,23 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button1 = new System.Windows.Forms.Button();
             this.IN_IP = new System.Windows.Forms.TextBox();
             this.IN_PROT = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.modbus_sqlDataSet = new modbus_test.modbus_sqlDataSet();
-            this.modbusbuffsqlBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.modbus_buff_sqlTableAdapter = new modbus_test.modbus_sqlDataSetTableAdapters.modbus_buff_sqlTableAdapter();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.database1DataSet = new modbus_test.Database1DataSet();
+            this.modbusTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.modbusTableTableAdapter = new modbus_test.Database1DataSetTableAdapters.modbusTableTableAdapter();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.线圈DataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.输入状态DataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.保持寄存器DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.输入寄存器DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.modbus_sqlDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.modbusbuffsqlBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.modbusTableBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -95,54 +94,41 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDDataGridViewTextBoxColumn,
+            this.idDataGridViewTextBoxColumn,
             this.线圈DataGridViewCheckBoxColumn,
             this.输入状态DataGridViewCheckBoxColumn,
             this.保持寄存器DataGridViewTextBoxColumn,
             this.输入寄存器DataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.modbusbuffsqlBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(37, 62);
+            this.dataGridView1.DataSource = this.modbusTableBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(37, 89);
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(687, 573);
+            this.dataGridView1.Size = new System.Drawing.Size(585, 506);
             this.dataGridView1.TabIndex = 5;
-            this.dataGridView1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.my_tes);
-            this.dataGridView1.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.DataGridView_Cellvalidating);
-            this.dataGridView1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.DataError_handle);
             // 
-            // modbus_sqlDataSet
+            // database1DataSet
             // 
-            this.modbus_sqlDataSet.DataSetName = "modbus_sqlDataSet";
-            this.modbus_sqlDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.database1DataSet.DataSetName = "Database1DataSet";
+            this.database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // modbusbuffsqlBindingSource
+            // modbusTableBindingSource
             // 
-            this.modbusbuffsqlBindingSource.DataMember = "modbus_buff_sql";
-            this.modbusbuffsqlBindingSource.DataSource = this.modbus_sqlDataSet;
+            this.modbusTableBindingSource.DataMember = "modbusTable";
+            this.modbusTableBindingSource.DataSource = this.database1DataSet;
             // 
-            // modbus_buff_sqlTableAdapter
+            // modbusTableTableAdapter
             // 
-            this.modbus_buff_sqlTableAdapter.ClearBeforeFill = true;
+            this.modbusTableTableAdapter.ClearBeforeFill = true;
             // 
-            // iDDataGridViewTextBoxColumn
+            // idDataGridViewTextBoxColumn
             // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // 线圈DataGridViewCheckBoxColumn
             // 
@@ -183,8 +169,8 @@
             this.Text = "MODBUS";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.modbus_sqlDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.modbusbuffsqlBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.modbusTableBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -198,10 +184,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private modbus_sqlDataSet modbus_sqlDataSet;
-        private System.Windows.Forms.BindingSource modbusbuffsqlBindingSource;
-        private modbus_sqlDataSetTableAdapters.modbus_buff_sqlTableAdapter modbus_buff_sqlTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private Database1DataSet database1DataSet;
+        private System.Windows.Forms.BindingSource modbusTableBindingSource;
+        private Database1DataSetTableAdapters.modbusTableTableAdapter modbusTableTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn 线圈DataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn 输入状态DataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn 保持寄存器DataGridViewTextBoxColumn;

@@ -20,17 +20,17 @@ namespace modbus_test {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("modbus_sqlDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("Database1DataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class modbus_sqlDataSet : global::System.Data.DataSet {
+    public partial class Database1DataSet : global::System.Data.DataSet {
         
-        private modbus_buff_sqlDataTable tablemodbus_buff_sql;
+        private modbusTableDataTable tablemodbusTable;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public modbus_sqlDataSet() {
+        public Database1DataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace modbus_test {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected modbus_sqlDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected Database1DataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace modbus_test {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["modbus_buff_sql"] != null)) {
-                    base.Tables.Add(new modbus_buff_sqlDataTable(ds.Tables["modbus_buff_sql"]));
+                if ((ds.Tables["modbusTable"] != null)) {
+                    base.Tables.Add(new modbusTableDataTable(ds.Tables["modbusTable"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace modbus_test {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public modbus_buff_sqlDataTable modbus_buff_sql {
+        public modbusTableDataTable modbusTable {
             get {
-                return this.tablemodbus_buff_sql;
+                return this.tablemodbusTable;
             }
         }
         
@@ -127,7 +127,7 @@ namespace modbus_test {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            modbus_sqlDataSet cln = ((modbus_sqlDataSet)(base.Clone()));
+            Database1DataSet cln = ((Database1DataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace modbus_test {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["modbus_buff_sql"] != null)) {
-                    base.Tables.Add(new modbus_buff_sqlDataTable(ds.Tables["modbus_buff_sql"]));
+                if ((ds.Tables["modbusTable"] != null)) {
+                    base.Tables.Add(new modbusTableDataTable(ds.Tables["modbusTable"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace modbus_test {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tablemodbus_buff_sql = ((modbus_buff_sqlDataTable)(base.Tables["modbus_buff_sql"]));
+            this.tablemodbusTable = ((modbusTableDataTable)(base.Tables["modbusTable"]));
             if ((initTable == true)) {
-                if ((this.tablemodbus_buff_sql != null)) {
-                    this.tablemodbus_buff_sql.InitVars();
+                if ((this.tablemodbusTable != null)) {
+                    this.tablemodbusTable.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace modbus_test {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "modbus_sqlDataSet";
+            this.DataSetName = "Database1DataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/modbus_sqlDataSet.xsd";
+            this.Namespace = "http://tempuri.org/Database1DataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tablemodbus_buff_sql = new modbus_buff_sqlDataTable();
-            base.Tables.Add(this.tablemodbus_buff_sql);
+            this.tablemodbusTable = new modbusTableDataTable();
+            base.Tables.Add(this.tablemodbusTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializemodbus_buff_sql() {
+        private bool ShouldSerializemodbusTable() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace modbus_test {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            modbus_sqlDataSet ds = new modbus_sqlDataSet();
+            Database1DataSet ds = new Database1DataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,16 +270,16 @@ namespace modbus_test {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void modbus_buff_sqlRowChangeEventHandler(object sender, modbus_buff_sqlRowChangeEvent e);
+        public delegate void modbusTableRowChangeEventHandler(object sender, modbusTableRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class modbus_buff_sqlDataTable : global::System.Data.TypedTableBase<modbus_buff_sqlRow> {
+        public partial class modbusTableDataTable : global::System.Data.TypedTableBase<modbusTableRow> {
             
-            private global::System.Data.DataColumn columnID;
+            private global::System.Data.DataColumn columnId;
             
             private global::System.Data.DataColumn column线圈;
             
@@ -291,8 +291,8 @@ namespace modbus_test {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public modbus_buff_sqlDataTable() {
-                this.TableName = "modbus_buff_sql";
+            public modbusTableDataTable() {
+                this.TableName = "modbusTable";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -300,7 +300,7 @@ namespace modbus_test {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal modbus_buff_sqlDataTable(global::System.Data.DataTable table) {
+            internal modbusTableDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -317,16 +317,16 @@ namespace modbus_test {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected modbus_buff_sqlDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected modbusTableDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn IDColumn {
+            public global::System.Data.DataColumn IdColumn {
                 get {
-                    return this.columnID;
+                    return this.columnId;
                 }
             }
             
@@ -373,49 +373,56 @@ namespace modbus_test {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public modbus_buff_sqlRow this[int index] {
+            public modbusTableRow this[int index] {
                 get {
-                    return ((modbus_buff_sqlRow)(this.Rows[index]));
+                    return ((modbusTableRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event modbus_buff_sqlRowChangeEventHandler modbus_buff_sqlRowChanging;
+            public event modbusTableRowChangeEventHandler modbusTableRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event modbus_buff_sqlRowChangeEventHandler modbus_buff_sqlRowChanged;
+            public event modbusTableRowChangeEventHandler modbusTableRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event modbus_buff_sqlRowChangeEventHandler modbus_buff_sqlRowDeleting;
+            public event modbusTableRowChangeEventHandler modbusTableRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event modbus_buff_sqlRowChangeEventHandler modbus_buff_sqlRowDeleted;
+            public event modbusTableRowChangeEventHandler modbusTableRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Addmodbus_buff_sqlRow(modbus_buff_sqlRow row) {
+            public void AddmodbusTableRow(modbusTableRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public modbus_buff_sqlRow Addmodbus_buff_sqlRow(bool 线圈, bool 输入状态, short 保持寄存器, short 输入寄存器) {
-                modbus_buff_sqlRow rowmodbus_buff_sqlRow = ((modbus_buff_sqlRow)(this.NewRow()));
+            public modbusTableRow AddmodbusTableRow(bool 线圈, bool 输入状态, short 保持寄存器, short 输入寄存器) {
+                modbusTableRow rowmodbusTableRow = ((modbusTableRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         线圈,
                         输入状态,
                         保持寄存器,
                         输入寄存器};
-                rowmodbus_buff_sqlRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowmodbus_buff_sqlRow);
-                return rowmodbus_buff_sqlRow;
+                rowmodbusTableRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowmodbusTableRow);
+                return rowmodbusTableRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public modbusTableRow FindById(int Id) {
+                return ((modbusTableRow)(this.Rows.Find(new object[] {
+                            Id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                modbus_buff_sqlDataTable cln = ((modbus_buff_sqlDataTable)(base.Clone()));
+                modbusTableDataTable cln = ((modbusTableDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -423,13 +430,13 @@ namespace modbus_test {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new modbus_buff_sqlDataTable();
+                return new modbusTableDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
-                this.columnID = base.Columns["ID"];
+                this.columnId = base.Columns["Id"];
                 this.column线圈 = base.Columns["线圈"];
                 this.column输入状态 = base.Columns["输入状态"];
                 this.column保持寄存器 = base.Columns["保持寄存器"];
@@ -439,8 +446,8 @@ namespace modbus_test {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID);
+                this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId);
                 this.column线圈 = new global::System.Data.DataColumn("线圈", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.column线圈);
                 this.column输入状态 = new global::System.Data.DataColumn("输入状态", typeof(bool), null, global::System.Data.MappingType.Element);
@@ -450,45 +457,43 @@ namespace modbus_test {
                 this.column输入寄存器 = new global::System.Data.DataColumn("输入寄存器", typeof(short), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.column输入寄存器);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnID}, false));
-                this.columnID.AutoIncrement = true;
-                this.columnID.AutoIncrementSeed = 1;
-                this.columnID.AllowDBNull = false;
-                this.columnID.Unique = true;
+                                this.columnId}, true));
+                this.columnId.AutoIncrement = true;
+                this.columnId.AutoIncrementSeed = -1;
+                this.columnId.AutoIncrementStep = -1;
+                this.columnId.AllowDBNull = false;
+                this.columnId.ReadOnly = true;
+                this.columnId.Unique = true;
                 this.column线圈.AllowDBNull = false;
-                this.column线圈.DefaultValue = ((bool)(false));
                 this.column输入状态.AllowDBNull = false;
-                this.column输入状态.DefaultValue = ((bool)(false));
                 this.column保持寄存器.AllowDBNull = false;
-                this.column保持寄存器.DefaultValue = ((short)(0));
                 this.column输入寄存器.AllowDBNull = false;
-                this.column输入寄存器.DefaultValue = ((short)(0));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public modbus_buff_sqlRow Newmodbus_buff_sqlRow() {
-                return ((modbus_buff_sqlRow)(this.NewRow()));
+            public modbusTableRow NewmodbusTableRow() {
+                return ((modbusTableRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new modbus_buff_sqlRow(builder);
+                return new modbusTableRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(modbus_buff_sqlRow);
+                return typeof(modbusTableRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.modbus_buff_sqlRowChanged != null)) {
-                    this.modbus_buff_sqlRowChanged(this, new modbus_buff_sqlRowChangeEvent(((modbus_buff_sqlRow)(e.Row)), e.Action));
+                if ((this.modbusTableRowChanged != null)) {
+                    this.modbusTableRowChanged(this, new modbusTableRowChangeEvent(((modbusTableRow)(e.Row)), e.Action));
                 }
             }
             
@@ -496,8 +501,8 @@ namespace modbus_test {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.modbus_buff_sqlRowChanging != null)) {
-                    this.modbus_buff_sqlRowChanging(this, new modbus_buff_sqlRowChangeEvent(((modbus_buff_sqlRow)(e.Row)), e.Action));
+                if ((this.modbusTableRowChanging != null)) {
+                    this.modbusTableRowChanging(this, new modbusTableRowChangeEvent(((modbusTableRow)(e.Row)), e.Action));
                 }
             }
             
@@ -505,8 +510,8 @@ namespace modbus_test {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.modbus_buff_sqlRowDeleted != null)) {
-                    this.modbus_buff_sqlRowDeleted(this, new modbus_buff_sqlRowChangeEvent(((modbus_buff_sqlRow)(e.Row)), e.Action));
+                if ((this.modbusTableRowDeleted != null)) {
+                    this.modbusTableRowDeleted(this, new modbusTableRowChangeEvent(((modbusTableRow)(e.Row)), e.Action));
                 }
             }
             
@@ -514,14 +519,14 @@ namespace modbus_test {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.modbus_buff_sqlRowDeleting != null)) {
-                    this.modbus_buff_sqlRowDeleting(this, new modbus_buff_sqlRowChangeEvent(((modbus_buff_sqlRow)(e.Row)), e.Action));
+                if ((this.modbusTableRowDeleting != null)) {
+                    this.modbusTableRowDeleting(this, new modbusTableRowChangeEvent(((modbusTableRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Removemodbus_buff_sqlRow(modbus_buff_sqlRow row) {
+            public void RemovemodbusTableRow(modbusTableRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -530,7 +535,7 @@ namespace modbus_test {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                modbus_sqlDataSet ds = new modbus_sqlDataSet();
+                Database1DataSet ds = new Database1DataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -548,7 +553,7 @@ namespace modbus_test {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "modbus_buff_sqlDataTable";
+                attribute2.FixedValue = "modbusTableDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -592,25 +597,25 @@ namespace modbus_test {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class modbus_buff_sqlRow : global::System.Data.DataRow {
+        public partial class modbusTableRow : global::System.Data.DataRow {
             
-            private modbus_buff_sqlDataTable tablemodbus_buff_sql;
+            private modbusTableDataTable tablemodbusTable;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal modbus_buff_sqlRow(global::System.Data.DataRowBuilder rb) : 
+            internal modbusTableRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablemodbus_buff_sql = ((modbus_buff_sqlDataTable)(this.Table));
+                this.tablemodbusTable = ((modbusTableDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int ID {
+            public int Id {
                 get {
-                    return ((int)(this[this.tablemodbus_buff_sql.IDColumn]));
+                    return ((int)(this[this.tablemodbusTable.IdColumn]));
                 }
                 set {
-                    this[this.tablemodbus_buff_sql.IDColumn] = value;
+                    this[this.tablemodbusTable.IdColumn] = value;
                 }
             }
             
@@ -618,10 +623,10 @@ namespace modbus_test {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool 线圈 {
                 get {
-                    return ((bool)(this[this.tablemodbus_buff_sql.线圈Column]));
+                    return ((bool)(this[this.tablemodbusTable.线圈Column]));
                 }
                 set {
-                    this[this.tablemodbus_buff_sql.线圈Column] = value;
+                    this[this.tablemodbusTable.线圈Column] = value;
                 }
             }
             
@@ -629,10 +634,10 @@ namespace modbus_test {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool 输入状态 {
                 get {
-                    return ((bool)(this[this.tablemodbus_buff_sql.输入状态Column]));
+                    return ((bool)(this[this.tablemodbusTable.输入状态Column]));
                 }
                 set {
-                    this[this.tablemodbus_buff_sql.输入状态Column] = value;
+                    this[this.tablemodbusTable.输入状态Column] = value;
                 }
             }
             
@@ -640,10 +645,10 @@ namespace modbus_test {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public short 保持寄存器 {
                 get {
-                    return ((short)(this[this.tablemodbus_buff_sql.保持寄存器Column]));
+                    return ((short)(this[this.tablemodbusTable.保持寄存器Column]));
                 }
                 set {
-                    this[this.tablemodbus_buff_sql.保持寄存器Column] = value;
+                    this[this.tablemodbusTable.保持寄存器Column] = value;
                 }
             }
             
@@ -651,10 +656,10 @@ namespace modbus_test {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public short 输入寄存器 {
                 get {
-                    return ((short)(this[this.tablemodbus_buff_sql.输入寄存器Column]));
+                    return ((short)(this[this.tablemodbusTable.输入寄存器Column]));
                 }
                 set {
-                    this[this.tablemodbus_buff_sql.输入寄存器Column] = value;
+                    this[this.tablemodbusTable.输入寄存器Column] = value;
                 }
             }
         }
@@ -663,22 +668,22 @@ namespace modbus_test {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class modbus_buff_sqlRowChangeEvent : global::System.EventArgs {
+        public class modbusTableRowChangeEvent : global::System.EventArgs {
             
-            private modbus_buff_sqlRow eventRow;
+            private modbusTableRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public modbus_buff_sqlRowChangeEvent(modbus_buff_sqlRow row, global::System.Data.DataRowAction action) {
+            public modbusTableRowChangeEvent(modbusTableRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public modbus_buff_sqlRow Row {
+            public modbusTableRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -694,7 +699,7 @@ namespace modbus_test {
         }
     }
 }
-namespace modbus_test.modbus_sqlDataSetTableAdapters {
+namespace modbus_test.Database1DataSetTableAdapters {
     
     
     /// <summary>
@@ -706,7 +711,7 @@ namespace modbus_test.modbus_sqlDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class modbus_buff_sqlTableAdapter : global::System.ComponentModel.Component {
+    public partial class modbusTableTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -720,7 +725,7 @@ namespace modbus_test.modbus_sqlDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public modbus_buff_sqlTableAdapter() {
+        public modbusTableTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -817,29 +822,56 @@ namespace modbus_test.modbus_sqlDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "modbus_buff_sql";
-            tableMapping.ColumnMappings.Add("ID", "ID");
+            tableMapping.DataSetTable = "modbusTable";
+            tableMapping.ColumnMappings.Add("Id", "Id");
             tableMapping.ColumnMappings.Add("线圈", "线圈");
             tableMapping.ColumnMappings.Add("输入状态", "输入状态");
             tableMapping.ColumnMappings.Add("保持寄存器", "保持寄存器");
             tableMapping.ColumnMappings.Add("输入寄存器", "输入寄存器");
             this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[modbusTable] WHERE (([Id] = @Original_Id) AND ([线圈] = @Origina" +
+                "l_线圈) AND ([输入状态] = @Original_输入状态) AND ([保持寄存器] = @Original_保持寄存器) AND ([输入寄存器]" +
+                " = @Original_输入寄存器))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_线圈", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "线圈", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_输入状态", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "输入状态", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_保持寄存器", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "保持寄存器", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_输入寄存器", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "输入寄存器", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[modbus_buff_sql] ([线圈], [输入状态], [保持寄存器], [输入寄存器]) VALUES (@线圈," +
-                " @输入状态, @保持寄存器, @输入寄存器)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[modbusTable] ([线圈], [输入状态], [保持寄存器], [输入寄存器]) VALUES (@线圈, @输入" +
+                "状态, @保持寄存器, @输入寄存器);\r\nSELECT Id, 线圈, 输入状态, 保持寄存器, 输入寄存器 FROM modbusTable WHERE (" +
+                "Id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@线圈", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "线圈", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@输入状态", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "输入状态", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@保持寄存器", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "保持寄存器", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@输入寄存器", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "输入寄存器", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[modbusTable] SET [线圈] = @线圈, [输入状态] = @输入状态, [保持寄存器] = @保持寄存器, [输入寄存器] = @输入寄存器 WHERE (([Id] = @Original_Id) AND ([线圈] = @Original_线圈) AND ([输入状态] = @Original_输入状态) AND ([保持寄存器] = @Original_保持寄存器) AND ([输入寄存器] = @Original_输入寄存器));
+SELECT Id, 线圈, 输入状态, 保持寄存器, 输入寄存器 FROM modbusTable WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@线圈", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "线圈", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@输入状态", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "输入状态", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@保持寄存器", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "保持寄存器", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@输入寄存器", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "输入寄存器", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_线圈", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "线圈", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_输入状态", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "输入状态", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_保持寄存器", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "保持寄存器", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_输入寄存器", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "输入寄存器", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::modbus_test.Properties.Settings.Default.modbus_sqlConnectionString;
+            this._connection.ConnectionString = global::modbus_test.Properties.Settings.Default.Database1ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -848,7 +880,7 @@ namespace modbus_test.modbus_sqlDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, 线圈, 输入状态, 保持寄存器, 输入寄存器 FROM dbo.modbus_buff_sql";
+            this._commandCollection[0].CommandText = "SELECT Id, 线圈, 输入状态, 保持寄存器, 输入寄存器 FROM dbo.modbusTable";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -856,7 +888,7 @@ namespace modbus_test.modbus_sqlDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(modbus_sqlDataSet.modbus_buff_sqlDataTable dataTable) {
+        public virtual int Fill(Database1DataSet.modbusTableDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -869,9 +901,9 @@ namespace modbus_test.modbus_sqlDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual modbus_sqlDataSet.modbus_buff_sqlDataTable GetData() {
+        public virtual Database1DataSet.modbusTableDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            modbus_sqlDataSet.modbus_buff_sqlDataTable dataTable = new modbus_sqlDataSet.modbus_buff_sqlDataTable();
+            Database1DataSet.modbusTableDataTable dataTable = new Database1DataSet.modbusTableDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -879,15 +911,15 @@ namespace modbus_test.modbus_sqlDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(modbus_sqlDataSet.modbus_buff_sqlDataTable dataTable) {
+        public virtual int Update(Database1DataSet.modbusTableDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(modbus_sqlDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "modbus_buff_sql");
+        public virtual int Update(Database1DataSet dataSet) {
+            return this.Adapter.Update(dataSet, "modbusTable");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -903,6 +935,32 @@ namespace modbus_test.modbus_sqlDataSetTableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(global::System.Data.DataRow[] dataRows) {
             return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_Id, bool Original_线圈, bool Original_输入状态, short Original_保持寄存器, short Original_输入寄存器) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((bool)(Original_线圈));
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((bool)(Original_输入状态));
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((short)(Original_保持寄存器));
+            this.Adapter.DeleteCommand.Parameters[4].Value = ((short)(Original_输入寄存器));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -929,6 +987,45 @@ namespace modbus_test.modbus_sqlDataSetTableAdapters {
                 }
             }
         }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(bool 线圈, bool 输入状态, short 保持寄存器, short 输入寄存器, int Original_Id, bool Original_线圈, bool Original_输入状态, short Original_保持寄存器, short Original_输入寄存器, int Id) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((bool)(线圈));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((bool)(输入状态));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((short)(保持寄存器));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((short)(输入寄存器));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_Id));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((bool)(Original_线圈));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((bool)(Original_输入状态));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((short)(Original_保持寄存器));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((short)(Original_输入寄存器));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Id));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(bool 线圈, bool 输入状态, short 保持寄存器, short 输入寄存器, int Original_Id, bool Original_线圈, bool Original_输入状态, short Original_保持寄存器, short Original_输入寄存器) {
+            return this.Update(线圈, 输入状态, 保持寄存器, 输入寄存器, Original_Id, Original_线圈, Original_输入状态, Original_保持寄存器, Original_输入寄存器, Original_Id);
+        }
     }
     
     /// <summary>
@@ -943,7 +1040,7 @@ namespace modbus_test.modbus_sqlDataSetTableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
-        private modbus_buff_sqlTableAdapter _modbus_buff_sqlTableAdapter;
+        private modbusTableTableAdapter _modbusTableTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -965,12 +1062,12 @@ namespace modbus_test.modbus_sqlDataSetTableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public modbus_buff_sqlTableAdapter modbus_buff_sqlTableAdapter {
+        public modbusTableTableAdapter modbusTableTableAdapter {
             get {
-                return this._modbus_buff_sqlTableAdapter;
+                return this._modbusTableTableAdapter;
             }
             set {
-                this._modbus_buff_sqlTableAdapter = value;
+                this._modbusTableTableAdapter = value;
             }
         }
         
@@ -993,9 +1090,9 @@ namespace modbus_test.modbus_sqlDataSetTableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._modbus_buff_sqlTableAdapter != null) 
-                            && (this._modbus_buff_sqlTableAdapter.Connection != null))) {
-                    return this._modbus_buff_sqlTableAdapter.Connection;
+                if (((this._modbusTableTableAdapter != null) 
+                            && (this._modbusTableTableAdapter.Connection != null))) {
+                    return this._modbusTableTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1010,7 +1107,7 @@ namespace modbus_test.modbus_sqlDataSetTableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._modbus_buff_sqlTableAdapter != null)) {
+                if ((this._modbusTableTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1022,14 +1119,14 @@ namespace modbus_test.modbus_sqlDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateUpdatedRows(modbus_sqlDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(Database1DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._modbus_buff_sqlTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.modbus_buff_sql.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._modbusTableTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.modbusTable.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._modbus_buff_sqlTableAdapter.Update(updatedRows));
+                    result = (result + this._modbusTableTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1041,13 +1138,13 @@ namespace modbus_test.modbus_sqlDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateInsertedRows(modbus_sqlDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(Database1DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._modbus_buff_sqlTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.modbus_buff_sql.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._modbusTableTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.modbusTable.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._modbus_buff_sqlTableAdapter.Update(addedRows));
+                    result = (result + this._modbusTableTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1059,13 +1156,13 @@ namespace modbus_test.modbus_sqlDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateDeletedRows(modbus_sqlDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(Database1DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._modbus_buff_sqlTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.modbus_buff_sql.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._modbusTableTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.modbusTable.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._modbus_buff_sqlTableAdapter.Update(deletedRows));
+                    result = (result + this._modbusTableTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1101,15 +1198,15 @@ namespace modbus_test.modbus_sqlDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public virtual int UpdateAll(modbus_sqlDataSet dataSet) {
+        public virtual int UpdateAll(Database1DataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._modbus_buff_sqlTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._modbus_buff_sqlTableAdapter.Connection) == false))) {
+            if (((this._modbusTableTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._modbusTableTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("由 TableAdapterManager 管理的所有 TableAdapter 必须使用相同的连接字符串。");
             }
             global::System.Data.IDbConnection workConnection = this.Connection;
@@ -1143,13 +1240,13 @@ namespace modbus_test.modbus_sqlDataSetTableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._modbus_buff_sqlTableAdapter != null)) {
-                    revertConnections.Add(this._modbus_buff_sqlTableAdapter, this._modbus_buff_sqlTableAdapter.Connection);
-                    this._modbus_buff_sqlTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._modbus_buff_sqlTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._modbus_buff_sqlTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._modbus_buff_sqlTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._modbus_buff_sqlTableAdapter.Adapter);
+                if ((this._modbusTableTableAdapter != null)) {
+                    revertConnections.Add(this._modbusTableTableAdapter, this._modbusTableTableAdapter.Connection);
+                    this._modbusTableTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._modbusTableTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._modbusTableTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._modbusTableTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._modbusTableTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1210,9 +1307,9 @@ namespace modbus_test.modbus_sqlDataSetTableAdapters {
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._modbus_buff_sqlTableAdapter != null)) {
-                    this._modbus_buff_sqlTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._modbus_buff_sqlTableAdapter]));
-                    this._modbus_buff_sqlTableAdapter.Transaction = null;
+                if ((this._modbusTableTableAdapter != null)) {
+                    this._modbusTableTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._modbusTableTableAdapter]));
+                    this._modbusTableTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

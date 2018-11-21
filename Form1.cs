@@ -33,24 +33,7 @@ namespace modbus_test
         //    e.Row.HeaderCell.Value = string.Format("{0}", e.Row.Index + 1);
         //}
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            // TODO: 这行代码将数据加载到表“modbus_sqlDataSet.modbus_buff_sql”中。您可以根据需要移动或删除它。
-            this.modbus_buff_sqlTableAdapter.Fill(this.modbus_sqlDataSet.modbus_buff_sql);
-            
-        }
 
-        private void my_tes(object sender, DataGridViewCellEventArgs e)
-        {
-            // SqlConnection sc = this.modbus_buff_sqlTableAdapter.Connection;
-            // sc.Open();
-            // SqlBulkCopy sbc = new SqlBulkCopy(sc);
-            // sbc.DestinationTableName = "modbus";//你想往哪个数据库里的，哪个表，的里面插数据，就填哪个表的完整名
-            // sbc.WriteToServer(modbus_sqlDataSet.Tables[0]);//这句才是关键，顶TM各种循环，顶你到你爽乎！
-            //// sbc.
-            // sc.Close();
-            this.modbus_buff_sqlTableAdapter.Fill(this.modbus_sqlDataSet.modbus_buff_sql);
-        }
 
         private void DataError_handle(object sender, DataGridViewDataErrorEventArgs e)
 
@@ -84,6 +67,13 @@ namespace modbus_test
 
 
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // TODO: 这行代码将数据加载到表“database1DataSet.modbusTable”中。您可以根据需要移动或删除它。
+            this.modbusTableTableAdapter.Fill(this.database1DataSet.modbusTable);
+
         }
     }
 }
