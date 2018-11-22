@@ -22,7 +22,7 @@ namespace modbus_test {
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
     [global::System.Xml.Serialization.XmlRootAttribute("Database1DataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class Database1DataSet : global::System.Data.DataSet {
+    public  class Database1DataSet : global::System.Data.DataSet {
         
         private modbusTableDataTable tablemodbusTable;
         
@@ -459,15 +459,18 @@ namespace modbus_test {
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AutoIncrement = true;
-                this.columnId.AutoIncrementSeed = -1;
-                this.columnId.AutoIncrementStep = -1;
+                this.columnId.AutoIncrementSeed = 1;
                 this.columnId.AllowDBNull = false;
                 this.columnId.ReadOnly = true;
                 this.columnId.Unique = true;
                 this.column线圈.AllowDBNull = false;
+                this.column线圈.DefaultValue = ((bool)(false));
                 this.column输入状态.AllowDBNull = false;
+                this.column输入状态.DefaultValue = ((bool)(false));
                 this.column保持寄存器.AllowDBNull = false;
+                this.column保持寄存器.DefaultValue = ((short)(0));
                 this.column输入寄存器.AllowDBNull = false;
+                this.column输入寄存器.DefaultValue = ((short)(0));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

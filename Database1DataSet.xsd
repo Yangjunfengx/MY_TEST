@@ -35,7 +35,7 @@ SELECT Id, 线圈, 输入状态, 保持寄存器, 输入寄存器 FROM modbusTab
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT Id, 线圈, 输入状态, 保持寄存器, 输入寄存器 FROM dbo.modbusTable</CommandText>
                     <Parameters />
                   </DbCommand>
@@ -77,14 +77,14 @@ SELECT Id, 线圈, 输入状态, 保持寄存器, 输入寄存器 FROM modbusTab
   <xs:element name="Database1DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Database1DataSet" msprop:Generator_UserDSName="Database1DataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="modbusTable" msprop:Generator_TableClassName="modbusTableDataTable" msprop:Generator_TableVarName="tablemodbusTable" msprop:Generator_TablePropName="modbusTable" msprop:Generator_RowDeletingName="modbusTableRowDeleting" msprop:Generator_RowChangingName="modbusTableRowChanging" msprop:Generator_RowEvHandlerName="modbusTableRowChangeEventHandler" msprop:Generator_RowDeletedName="modbusTableRowDeleted" msprop:Generator_UserTableName="modbusTable" msprop:Generator_RowChangedName="modbusTableRowChanged" msprop:Generator_RowEvArgName="modbusTableRowChangeEvent" msprop:Generator_RowClassName="modbusTableRow">
+        <xs:element name="modbusTable" msprop:Generator_TableClassName="modbusTableDataTable" msprop:Generator_TableVarName="tablemodbusTable" msprop:Generator_RowChangedName="modbusTableRowChanged" msprop:Generator_TablePropName="modbusTable" msprop:Generator_RowDeletingName="modbusTableRowDeleting" msprop:Generator_RowChangingName="modbusTableRowChanging" msprop:Generator_RowEvHandlerName="modbusTableRowChangeEventHandler" msprop:Generator_RowDeletedName="modbusTableRowDeleted" msprop:Generator_RowClassName="modbusTableRow" msprop:Generator_UserTableName="modbusTable" msprop:Generator_RowEvArgName="modbusTableRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
-              <xs:element name="线圈" msprop:Generator_ColumnVarNameInTable="column线圈" msprop:Generator_ColumnPropNameInRow="线圈" msprop:Generator_ColumnPropNameInTable="线圈Column" msprop:Generator_UserColumnName="线圈" type="xs:boolean" />
-              <xs:element name="输入状态" msprop:Generator_ColumnVarNameInTable="column输入状态" msprop:Generator_ColumnPropNameInRow="输入状态" msprop:Generator_ColumnPropNameInTable="输入状态Column" msprop:Generator_UserColumnName="输入状态" type="xs:boolean" />
-              <xs:element name="保持寄存器" msprop:Generator_ColumnVarNameInTable="column保持寄存器" msprop:Generator_ColumnPropNameInRow="保持寄存器" msprop:Generator_ColumnPropNameInTable="保持寄存器Column" msprop:Generator_UserColumnName="保持寄存器" type="xs:short" />
-              <xs:element name="输入寄存器" msprop:Generator_ColumnVarNameInTable="column输入寄存器" msprop:Generator_ColumnPropNameInRow="输入寄存器" msprop:Generator_ColumnPropNameInTable="输入寄存器Column" msprop:Generator_UserColumnName="输入寄存器" type="xs:short" />
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
+              <xs:element name="线圈" msprop:Generator_ColumnVarNameInTable="column线圈" msprop:Generator_ColumnPropNameInRow="线圈" msprop:Generator_ColumnPropNameInTable="线圈Column" msprop:Generator_UserColumnName="线圈" type="xs:boolean" default="false" />
+              <xs:element name="输入状态" msprop:Generator_ColumnVarNameInTable="column输入状态" msprop:Generator_ColumnPropNameInRow="输入状态" msprop:Generator_ColumnPropNameInTable="输入状态Column" msprop:Generator_UserColumnName="输入状态" type="xs:boolean" default="false" />
+              <xs:element name="保持寄存器" msprop:Generator_ColumnVarNameInTable="column保持寄存器" msprop:Generator_ColumnPropNameInRow="保持寄存器" msprop:Generator_ColumnPropNameInTable="保持寄存器Column" msprop:Generator_UserColumnName="保持寄存器" type="xs:short" default="0" />
+              <xs:element name="输入寄存器" msprop:Generator_ColumnVarNameInTable="column输入寄存器" msprop:Generator_ColumnPropNameInRow="输入寄存器" msprop:Generator_ColumnPropNameInTable="输入寄存器Column" msprop:Generator_UserColumnName="输入寄存器" type="xs:short" default="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
